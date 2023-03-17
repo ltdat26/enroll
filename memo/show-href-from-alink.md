@@ -1,0 +1,6 @@
+# https://www.mattjennings.net/extracting-urls-web-page-chrome-developer-tools
+
+var urls = document.getElementsByTagName('a');
+for (url in urls) {
+    console.log ( urls[url].href );
+}

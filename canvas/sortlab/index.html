@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exploring Sorting Algorithms</title>
+  <style>
+    body {
+      background-color: #DDDDDD;
+    }
+
+    #content {
+      float: left;
+    }
+
+    #visual,
+    #timed,
+    #logdiv {
+      background-color: white;
+      padding: 8px 20px;
+      width: 100%;
+      border: 2px solid black;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body onload="init()">
+  <div id="content">
+
+    <noscript>
+      <p style="color:#990000">Sorry, this program requires JavaScript to run.</p>
+    </noscript>
+    <div id="visual">
+      <h2>Visual Sort</h2>
+      <table border="0">
+        <tr valign=top>
+          <td>
+            <canvas id="sortcanvas" width=600 height=400 style="background-color:rgb(230,230,255)"></canvas>
+          </td>
+          <td>
+            <div style="margin-left:25px">
+              <p><select id="sortSelect">
+                  <option value="1">Bubble Sort</option>
+                  <option value="2">Selection Sort</option>
+                  <option value="3">Insertion Sort</option>
+                  <option value="4">Merge Sort</option>
+                  <option value="5">Quick Sort</option>
+                </select></p>
+              <p><button id="newBtn">New Sort</button></p>
+              <p><input type=checkbox id="fastCheckbox"><label for="fastCheckbox">Fast</label></p>
+              <p><button id="runBtn">Run</button></p>
+              <p><button id="pauseBtn">Pause</button></p>
+              <p><button id="stepBtn">Step</button></p>
+              <p style="margin-top:30px;">
+                <span style="color:white"><b>Comparisons:&nbsp;</b>200</span><br>
+                <b>Comparisons:</b>&nbsp;<span id="compCt">0</span>
+              </p>
+              <p style="margin-top:30px;">
+                <b>Copies:</b>&nbsp;<span id="moveCt">0</span>
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <p><span style="color:white">X</span><span id="message1">&nbsp;</span></p>
+            <p><span style="color:white">X</span><span id="message2">&nbsp;</span></p>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div id="timed">
+
+      <h2 id="t-head">Timed Sort</h2>
+
+      <p id="t-message" style='color:#990000'></p>
+
+      <table style="margin-left:30px" border="0">
+        <tr>
+          <td align=right><b>Number of arrays:</b></td>
+          <td><input type="text" id="t-arrayCt" maxlength="10" size="10"></td>
+          <td align=right><b style="margin-left:50px">Arrays Sorted:</b></td>
+          <td><span id="t-arraysSorted"></span></td>
+        </tr>
+        <tr>
+          <td align=right><b>Items per array:</b></td>
+          <td><input type="text" id="t-arrayLength" maxlength="10" size="10"></td>
+          <td align=right><b style="margin-left:50px">Elapsed Time:</b></td>
+          <td><span id="t-elapsedTime"></span></td>
+        </tr>
+        <tr>
+          <td align=right><b>Sorting Algorithm:</b></td>
+          <td><select id="t-algorithm">
+              <option value="1">Bubble Sort</option>
+              <option value="2">Selection Sort</option>
+              <option value="3">Insertion Sort</option>
+              <option value="4">Merge Sort</option>
+              <option value="5">Quick Sort</option>
+            </select></td>
+          <td align=right><b style="margin-left:50px">Comparisons:</b></td>
+          <td><span id="t-comparisons"></span></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button id="t-run">Run the sort!</button></td>
+          <td align=right><b style="margin-left:50px">Copies:</b></td>
+          <td><span id="t-copies"></span></td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div id="logdiv">
+      <h2>Log&nbsp;&nbsp;<label style="font-size:60%"><input type="checkbox" id="enablelog">Enable Logging</label></h2>
+      <pre id="log">
+  Algorithm      Array Count  Array Size   Comparisons      Copies           Seconds
+  -------------- -----------  -----------  ---------------  ---------------  --------
+  </pre>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

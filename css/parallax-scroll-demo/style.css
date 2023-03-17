@@ -1,0 +1,89 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: aliceblue;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 100%;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+div:nth-child(1) {
+  background-image: url(img/grid_0.png);
+  background-size: cover;
+}
+
+div:nth-child(2) {
+  background-image: linear-gradient(99deg, rgba(115, 18, 81, 1) 10.6%, rgba(28, 28, 28, 1) 118%);
+}
+
+div:nth-child(3) {
+  height: 400px;
+  background-image: url(img/unknown.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+div:nth-child(4) {
+  background-image: linear-gradient(358.4deg, rgba(249, 151, 119, 1) -2.1%, rgba(98, 58, 162, 1) 90%);
+}
+
+.container {
+  flex-direction: column;
+}
+
+.title2, .title3 {
+  font-size: 24px;
+}
+
+.slidein {
+  animation: 3s slideIn;
+}
+
+.title-2 {
+  animation: 2s slideDown 0s infinite;
+}
+
+.title-3 {
+  animation: 2s slideDown 5s infinite;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-500%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}

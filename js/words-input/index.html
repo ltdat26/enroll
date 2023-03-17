@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>A Scratch Web</title>
+    </head>
+
+    <body>
+        <header class="heart"></header>
+        <!-- Input -->
+        <main>
+        <section class="container">
+            <article>
+                <p id="warning">Words input by Datrix</p>
+            </article>
+            <article>
+                <form>
+                    <input class="input" placeholder="input" type="text" id="input" name="words_input" pattern=".{1,}" maxlength="24">
+
+                    <input class="button" id="add" type="button" value="Add">
+                </form>
+
+                <ul class="list" id="list">
+                </ul>
+            </article>
+        </section>
+
+        <!-- Output -->
+        <section class="container">
+            <button class="button" id="copy">Copy</button>
+            <button class="button" id="save">Save</button>
+            <br>
+            <textarea class="output" name="words_output" id="output" cols="40" rows="9"></textarea>
+            <br>
+            <button class="button" id="clear">Clear</button>
+        </section>
+        <br>
+        </main>
+        <script src="main.js"></script>
+        <footer></footer>
+    </body>
+</html>

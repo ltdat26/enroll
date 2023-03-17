@@ -1,0 +1,67 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // =============== REMIXICONS ===============
+  link(href='https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css' rel='stylesheet')
+  // =============== CSS ===============
+  link(rel='stylesheet' href='assets/css/styles.css')
+  title Juice
+// ==================== HEADER ====================
+header#header.header
+  nav.nav.container
+    a.nav__logo(href='#')
+      | Juice
+      span ables
+    #nav-menu.nav__menu
+      ul.nav__list
+        li.nav__item
+          a.nav__link.active-link(href='#') Home
+        li.nav__item
+          a.nav__link(href='#') About
+        li.nav__item
+          a.nav__link(href='#') Services
+        li.nav__item
+          a.nav__link(href='#') Contact
+      #nav-close.nav__close
+        i.ri-close-line
+      img.nav__img(src='assets/img/nav-img.png' alt='nav image')
+    // Toggle button
+    #nav-toggle.nav__toggle
+      i.ri-menu-line
+// ==================== MAIN ====================
+main.main
+  // ==================== HOME ====================
+  section.home
+    .home__shape-small
+    .home__shape-big
+    img.home__shape-bg(src="assets/img/shape-bg.png", alt="shape bg image")
+    .home__container.container
+      .home__data
+        h1.home__title
+          | Get Frest
+          span Juiceables
+          |                         Everyday
+        p.home__description
+          | Starting at $360 per month, get
+          br
+          |                         those benefits and more.
+        a.home__button(href='#')
+          | Details
+      .home__images
+        img.home__liquid(src='assets/img/liquid-fruit.png' alt='liquid-fruit image')
+        .home__juice-animate
+          img.home__juice(src='assets/img/juice.png' alt='juice image')
+        img.home__apple1(src='assets/img/apple1.png' alt='apple1 image')
+        img.home__apple2(src='assets/img/apple2.png' alt='apple2 image')
+        div
+          img.home__leaf(src='assets/img/leaf.png' alt='leaf image')
+          img.home__leaf(src='assets/img/leaf.png' alt='leaf image')
+          img.home__leaf(src='assets/img/leaf.png' alt='leaf image')
+          img.home__leaf(src='assets/img/leaf.png' alt='leaf image')
+          img.home__leaf(src='assets/img/leaf.png' alt='leaf image')
+          img.home__leaf(src='assets/img/leaf.png' alt='leaf image')
+// =============== GSAP ===============
+script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js")
+// =============== MAIN JS ===============
+script(src='assets/js/main.js')
